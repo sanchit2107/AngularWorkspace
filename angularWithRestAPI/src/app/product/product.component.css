@@ -1,0 +1,10 @@
+table {
+  margin-left: 350px;
+  margin-top: 50px;
+  width: 50%;
+}
+
+table>tr>td,th{
+  padding: 10px;
+  text-align: center;
+}
