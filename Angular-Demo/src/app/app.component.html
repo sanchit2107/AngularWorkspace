@@ -1,0 +1,25 @@
+<h2>Welcome {{title}}</h2>
+
+<app-item (evt)="getData($event)"></app-item>
+
+<h1>Child Data : {{childData}}</h1>
+
+<app-item></app-item>
+<img src="{{image}}">
+
+<button [disabled]="isDisable">CLICK   ME</button>
+
+<div >
+  Name : <input type="text" name="in" [readonly]='isEdit' [(ngModel)]='name'>
+  <h3>Name : {{name}}</h3>
+</div>
+
+<button (click)="clickMe()">Change Input</button>
+
+<br>
+<br>
+<input type="text" [(ngModel)]='name' id="" (input)='check()'>
+
+<button [disabled]="isDisable">Edit on greater than 5</button>
+
+<app-item-list></app-item-list>
