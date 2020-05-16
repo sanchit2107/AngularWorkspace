@@ -1,0 +1,21 @@
+<table>
+    <tr>
+        <td>Employee ID</td><td><input type="text" #neweid></td>
+    </tr>
+    <tr>
+        <td>Name</td><td><input type="text" #newname></td>
+    </tr>
+    <tr>
+        <td>Age</td><td><input type="text" #newage></td>
+    </tr>
+    <tr>
+        <td><button (click)='addEmployee(neweid,newname,newage)'>Add Employee</button></td>
+    </tr>
+</table>
+<table class="table table-bordered">
+    <tr *ngFor="let e of emp" [ngClass]="getStyleClass(e.age)">
+        <td>{{e.empid}}</td>
+        <td>{{e.name}}</td>
+        <td>{{e.age}}</td>
+    </tr>
+</table>    
